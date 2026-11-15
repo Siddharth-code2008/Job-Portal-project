@@ -1303,7 +1303,7 @@ export const jobsDetails = [
  const jobs = (props) => {
 
    function Details() {
-    const jobsarray = jobsdetails.filter((job) => {
+    const jobsarray = jobsDetails.filter((job) => {
       return (
         job.category === props.category &&
         job.jobType === props.type
