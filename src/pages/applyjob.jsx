@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import Navbar from '../components/navbar'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { jobsDetails } from '../components/jobs'
 
 
 const applyjob = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   const {id} = useParams();
 
