@@ -24,8 +24,6 @@ HireHub is a job portal web application built using React and Tailwind CSS. It a
 - local storage
 
 ** 🚀 Upcoming Features **
-
-- login page
 - Responsive design 
 
 ** 🎯 Project Goal **
