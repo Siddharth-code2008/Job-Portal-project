@@ -5,7 +5,7 @@ import { jobsDetails } from '../components/jobs'
 
 const applications = () => {
   const location = useLocation();
-  const {name} = location.state?.name;
+  const name = location.state?.name;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +31,10 @@ return (
       <div className='flex flex-row justify-center bg-gray-100 min-h-screen w-full py-4'>
         <div className='border-gray-200 flex-col bg-white border-2 h-auto gap-4 flex rounded-xl w-[80vw] p-3'>
           <h1 className='font-bold text-4xl pb-2'>Applications</h1>
-            {apply.map((job) => (
+          {apply.length === 0 ? (
+            <p className='text-gray-500'>No applications yet.</p>
+          ) : (
+            apply.map((job) => (
               <div className='flex flex-col gap-3 border-2 border-gray-300 p-2 rounded-xl' key={job.id}>
                 <div className='flex flex-row gap-3'>
                   <img className='h-[5vw] w-[5vw]' src={job.companySrc}></img>
@@ -51,7 +54,9 @@ return (
                   </div>
                 </div>
               </div>
-            ))}
+            ))
+)}
+            
         </div>
       </div>
       

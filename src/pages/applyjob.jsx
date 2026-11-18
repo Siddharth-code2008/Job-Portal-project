@@ -24,7 +24,7 @@ const applyjob = () => {
   return (
     <div>
       <Navbar/>
-      <Link to='/' className='text-black font-semibold hover:text-blue-700 '>Back</Link>
+      <Link to='/' className='text-black font-semibold hover:text-blue-700 '><p>Back</p></Link>
 
       <div className='flex justify-center bg-gray-100 h-screen  w-full py-4'>
         {apply.map((details) =>(
