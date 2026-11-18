@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import Navbar from '../components/navbar'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { jobsDetails } from '../components/jobs'
