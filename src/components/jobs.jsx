@@ -1314,7 +1314,7 @@ export const jobsDetails = [
       <div className='flex flex-row p-3 gap-6 '>
 
         {jobsarray.map((info) => (
-          <Link  to = {`/applyjob/${info.id}`}>
+          <Link  to = {`/applyjob/${info.id}`} key={info.id}>
           <div className='flex flex-col border-gray-300 border-3 hover:border-blue-600 p-3 cursor-pointer rounded-2xl w-[18vw] h-auto' key={info.id}>
             <img className=' w-15 h-15 '  src={info.companySrc} alt={info.company} />
             <h1 className='font-bold text-xl  pt-4'>{info.jobName}</h1>

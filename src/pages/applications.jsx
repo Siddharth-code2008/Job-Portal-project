@@ -5,7 +5,11 @@ import { jobsDetails } from '../components/jobs'
 
 const applications = () => {
   const location = useLocation();
-  const {name} = location.state?location.state:name;
+  const {name} = location.state?.name;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [apply, setApply] = useState([]);
   

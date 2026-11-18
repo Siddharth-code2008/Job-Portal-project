@@ -4,11 +4,18 @@ import Searchbar from '../others/searchbar'
 import Categories from '../others/categories'
 import JobFilter from '../others/jobFilter'
 import Jobs from "../components/jobs";
-import { useState } from 'react';
+import { useState,  useEffect } from 'react';
 
 const homepage = () => {
+  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     const[info,setInfo] = useState("Others")
     const[type,newType] = useState("Full-time")
+
 
   return (
     <div>
@@ -18,7 +25,7 @@ const homepage = () => {
 
       <h2 className='font-bold ml-4 py-4 text-3xl'> Select Your Category</h2>
       <div className='flex flex-row  h-auto w-full gap-10 p-4 justify-between'>
-        <Categories onClick={() => {setInfo("Development")}}  para = "Development" src = "https://img.icons8.com/?size=100&id=1FdYDpqhZ86g&format=png&color=000000 "/>
+        <Categories onClick={() => {setInfo("Development")}}   para = "Development" src = "https://img.icons8.com/?size=100&id=1FdYDpqhZ86g&format=png&color=000000 "/>
         <Categories onClick={() => {setInfo("Design")}}  para = "Design" src = "https://img.icons8.com/?size=100&id=NqIEh7lsvFS8&format=png&color=000000"/>
         <Categories onClick={() => {setInfo("Marketing")}} para = "Marketing" src = "https://img.icons8.com/?size=100&id=MQiz3TkEm0h6&format=png&color=000000"/>
         <Categories onClick={() => {setInfo("Data & AI")}}  para = "Data & AI" src = "https://img.icons8.com/?size=100&id=ywKOa8qNRVyK&format=png&color=000000"/>
@@ -35,11 +42,12 @@ const homepage = () => {
         </div>
       </div>
   
-      <div className='flex flex-col gap  justify-between'>
+      <div className='flex flex-col   justify-between w-full'>
         <h2 className='font-bold my-4 ml-3  text-3xl '>Recommended Jobs</h2>
-        <Jobs category = {info} type = {type} />
+        <Jobs  category = {info} type = {type} />
       </div>
 
+      
     </div>
   )
 }
